@@ -17,6 +17,10 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18
+if (votingAge >=18){
+  return "True";
+}
 
 
 
@@ -58,8 +62,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+   return a * b;
   }
 
 
@@ -74,8 +78,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -107,9 +111,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(bodyWeight, age) {
+  if (age >= 1) {
+    if (bodyWeight <= 5) {
+      return bodyWeight * 0.05;
+    } 
+    else if (bodyWeight >= 6 && weight <= 10) {
+      return bodyWeight * 0.04;
+    }
+     else {
+      return bodyWeight * 0.03;
+    }
+  } else {
+    if (age <= 4 / 12) {
+      return bodyWeight * 0.1;
+    } 
+    else if (age > 4 / 12 && age <= 7 / 12) {
+      return bodyWeight * 0.05;
+    } 
+    else {
+      return bodyWeight * 0.04;
+    }
   }
+}
 
 
 
@@ -149,10 +173,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function miles(km){
+    return km*0.621371192;
+}
 
 
 //Task 5b - Feet to CM
@@ -163,8 +186,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
  
 
@@ -179,9 +202,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number) {
+  for (let i = number; i > 0; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${
+      i - 1
+    } bottles of soda on the wall`;
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -199,9 +226,22 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
+function grade(points){
+ if(points >= 90 && points <100){
+   return "A";
+ }
+ else if (points >= 80 && points <= 89){
+   return "B";
+ }  else if (points >= 70 && points <=79){
+   return "C";
+  
+ }else if (points >= 60 && points <=69 ){
+     return "D";
+ 
+    } else if (points<60){
+      return "F"
+    }
+   }
   
   
   
